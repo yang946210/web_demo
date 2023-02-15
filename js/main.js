@@ -1,8 +1,6 @@
 
 function dataType() {
 
-
-
     /**
      * 作用域关键字 const val let
      * 基本数据类型(存在栈内存中) string number boolean null undefined symbol(ES6) bigint(ES10)
@@ -11,7 +9,7 @@ function dataType() {
      * 数据类型
      */
     let string = "string"
-    let number = 123
+    let number = Number(22)
     let boolean = false
     let mNull = null
     let mUndefined = undefined
@@ -31,9 +29,6 @@ function dataType() {
      * constructor 是一种用于创建和初始化 class 创建的对象的特殊方法。请注意，它是函数（方法）
      * Object.prototype.toString.call(source) 方法返回一个表示该对象的字符串
      */
-
-
-
 
 }
 
@@ -71,8 +66,46 @@ function fun() {
     //方式4 函数构造函数(基本不用)
     let fun5 = new Function('a', 'b', "return a +'and'+ b")
 
+}
+
+function obj() {
+
+    let age5="create property by ES5";
+    let age6="create property by ES6";
+    // 1.对象自变量创建对象
+    let obj1={
+        name:"json",
+
+        //ES5/ES6 自变量添加属性
+        age6:age5,
+        age6,
+
+        //ES5/ES6 自变量添加方法
+        fun5:function () {
+            console.log("create function by es5 ")
+        },
+        fun6(){
+            console.log("create function by es6 ")
+        }
+
+    };
+
+    // 2.内置构造函数创建对象
+    let obj2=new Object()
+    obj2.name="box";
+    obj2.sex=17
+    obj2.send=function () {
+        return obj2.name+"and"+obj2.sex
+    }
+    // 3.Object.create创建函数
+    let obj3=Object.create({name:"zhangSan",age:12,fun4(){
+        return this.name+this.age
+    }})
 
 }
 
-
+function prototypal() {
+    const johan = {name: 'johan'};
+    console.dir(johan);
+}
 
