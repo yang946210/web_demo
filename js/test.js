@@ -17,11 +17,11 @@ function objectTest() {
 
 function typeofTest() {
 
-
 }
 
 
 function prototypalTest () {
     let johan = { name: 'johan' };
+    debugger
     console.dir(johan);
 }

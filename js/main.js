@@ -33,6 +33,9 @@ function dataType() {
 }
 
 
+/**
+ * 函数
+ */
 function fun() {
 
     /**
@@ -68,10 +71,14 @@ function fun() {
 
 }
 
+/**
+ * 对象
+ */
 function obj() {
 
     let age5="create property by ES5";
     let age6="create property by ES6";
+
     // 1.对象自变量创建对象
     let obj1={
         name:"json",
@@ -97,6 +104,7 @@ function obj() {
     obj2.send=function () {
         return obj2.name+"and"+obj2.sex
     }
+
     // 3.Object.create创建函数
     let obj3=Object.create({name:"zhangSan",age:12,fun4(){
         return this.name+this.age
